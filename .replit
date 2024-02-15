@@ -1,0 +1,7 @@
+hidden = [".config,install.sh"]
+modules = ["web:v2-20230623-0b7a606"]
+
+[deployment]
+publicDir = "/"
+deploymentTarget = "static"
+build = ["sh", "-c", "bash install.sh"]

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKQY1H4606"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KKQY1H4606');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirect Website</title>
+  <script>
+    // Get the value of the 'url' parameter from the query string
+    const urlParam = new URLSearchParams(window.location.search).get('url');
+
+    // If 'url' parameter is present, redirect to the specified URL with "https://"
+    if (urlParam) {
+      const redirectTo = urlParam.startsWith('http') ? urlParam : `https://${urlParam}`;
+      window.location.href = redirectTo;
+    } else {
+      // If 'url' parameter is not present, display an error message after a short delay
+      setTimeout(() => {
+        document.body.innerHTML = '<h1>Error: No URL specified</h1>';
+      }, 1000); // Delay in milliseconds
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Redirecting...</h1>
+</body>
+
+</html>
